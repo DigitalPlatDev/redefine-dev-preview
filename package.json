@@ -18,12 +18,12 @@
     "hexo-renderer-marked": "^5.0.0",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
-    "hexo-theme-keep": "^3.4.7",
     "hexo-wordcount": "^6.0.1",
     "nodejieba": "^2.6.0"
   },
   "scripts": {
-    "dev": "hexo server -p $PORT",
-    "build": "hexo generate"
+    "dev": "npm run setup-theme && hexo server -p $PORT",
+    "setup-theme": "git clone -b dev https://github.com/EvanNotFound/hexo-theme-redefine.git themes/redefine",
+    "build": "npm run setup-theme && hexo generate"
   }
 }
