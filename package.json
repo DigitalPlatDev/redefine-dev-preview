@@ -22,8 +22,8 @@
     "nodejieba": "^2.6.0"
   },
   "scripts": {
-    "dev": "npm run setup-theme && hexo server -p $PORT",
+    "dev": "hexo server -p $PORT",
     "setup-theme": "git clone -b dev https://github.com/EvanNotFound/hexo-theme-redefine.git themes/redefine",
-    "build": "npm run setup-theme && hexo generate"
+    "build": "hexo generate"
   }
 }
